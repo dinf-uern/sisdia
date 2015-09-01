@@ -1,5 +1,5 @@
 AppsData.getData = function(){
-    return this.findOne().fetch();
+    return this.findOne();
 }
 
 Meteor.subscribe('app-data');
