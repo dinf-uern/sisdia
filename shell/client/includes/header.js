@@ -1,5 +1,7 @@
 Template.header.helpers({
-    appName: 'base app',
+    appName: function(){
+        return AppsData.getData().title;
+    },
     leftMenu: function(){
         var items = Menus.find({side: 'left'}).fetch();
 
