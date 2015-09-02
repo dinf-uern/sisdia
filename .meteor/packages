@@ -10,3 +10,4 @@ momentjs:moment
 iron:router
 accounts-password
 alanning:roles
+tap:i18n

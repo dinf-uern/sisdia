@@ -13,6 +13,13 @@ Template.menuDropdown.helpers({
         var result = _.filter(items, function(menuItem){
             var user = Meteor.user();
 
+            //se o menu requer login e não há usuário logado
+            if (menuItem.loggedIn && !user)
+                return false;
+
+            if (menuItem.notLoggedIn && user)
+                return false;
+
             if (!menuItem.roles || menuItem.roles.length <= 0)
                 return true;
 
