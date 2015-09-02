@@ -40,7 +40,7 @@ Template.entrar.events({
         return throwError(error.reason);
       }
 
-      Router.go('home');
+      Router.go('/');
     });
   }
 });
