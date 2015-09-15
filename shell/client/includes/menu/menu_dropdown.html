@@ -1,0 +1,10 @@
+<template name="menuDropdown">
+    <li class="dropdown {{activeRouteClassDropdown getSubmenusStates}}">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{title}} <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            {{#each submenus}}
+                {{> menuItem}}
+            {{/each}}
+        </ul>
+    </li>
+</template>
